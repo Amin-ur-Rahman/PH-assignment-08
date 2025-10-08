@@ -1,17 +1,20 @@
 import React, { useState } from "react";
 import { TextAlignJustify } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 import { X } from "lucide-react";
 import { NavLink } from "react-router";
+import logo from "../../assets/logo.png";
+import "./nav.css";
 
 const NavBar = () => {
   const [toggle, setToggle] = useState(false);
   return (
     <div
-      className="flex items-center justify-between lg:justify-around px-[10dvw]  bg-base-100 p-6 shadow-md
-     shadow-gray-500 border-b"
+      className="flex items-center   justify-between   bg-base-100 py-3 px-[5dvw] shadow-md
+      "
     >
-      <div className="flex items-center justify-between ">
-        <button className="btn btn-square btn-ghost lg:hidden">
+      <div className="flex items-center gap-5 ">
+        <button className="btn btn-square btn-ghost md:hidden">
           {toggle ? (
             <X size={36} onClick={() => setToggle(!toggle)}></X>
           ) : (
@@ -19,29 +22,42 @@ const NavBar = () => {
           )}
         </button>
         <ul
-          className={`bg-transparent border-b-[.25px] shadow-sm shadow-gray-500 text-white font-semibold px-10 rounded-md py-4  md:hidden absolute top-[10%]  ${
+          className={`bg-transparent border-b-[.25px] shadow-sm shadow-gray-500 text-black font-semibold px-10 rounded-md py-4  absolute top-[10%]  ${
             toggle ? "left-0" : "-left-[100%]"
-          } duration-300 flex flex-col gap-4`}
+          } duration-300 flex flex-col gap-4 font-semibold`}
         >
-          <li>Home</li>
-          <li>Apps</li>
-          <li>Installation</li>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="allapps">Apps</NavLink>
+          <NavLink to="/installation">Installation</NavLink>
         </ul>
-      </div>
-      <div className="flex-1">
-        <NavLink to="/">
-          <h2 className="w-max border">SU Apps</h2>
-        </NavLink>
+        <div>
+          <div className="flex gap-3 items-center" to="">
+            <img src={logo} alt="logo" className="w-10 h-10 object-cover" />
+            <h2 className="text-[clamp(1.5rem,2dvw,2.5rem)] font-bold">
+              <span className="text-[#4b99e7]">SU.</span>
+              <span className="text-indigo-500">apk</span>
+            </h2>
+          </div>
+        </div>
       </div>
 
-      <ul className={`hidden lg:mx-10 lg:gap-5  lg:flex`}>
-        <li>Home</li>
-        <li>Apps</li>
-        <li>Installation</li>
+      <ul className={`hidden lg:mx-10 lg:gap-5  lg:flex font-semibold`}>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/allapps">Apps</NavLink>
+        <NavLink to="/installation">Installation</NavLink>
       </ul>
 
       <div className="flex-none">
-        <button className="btn btn-square btn-ghost">Contribute</button>
+        <a
+          href="https://github.com/Amin-ur-Rahman?tab=repositories"
+          target="_blank"
+        >
+          <button className="py-2 px-5 bg-gradient-to-r from-purple-700 to-purple-500 font-bold text-white rounded-sm flex items-center gap-3 ">
+            {" "}
+            <FaGithub />
+            Contribute
+          </button>
+        </a>
       </div>
     </div>
   );
