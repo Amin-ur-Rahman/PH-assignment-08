@@ -1,6 +1,6 @@
 import React, { Suspense, useContext } from "react";
 import Hero from "./hero/Hero";
-import DefaultApps from "./defaultApps/DefaultApps";
+import DefaultAppsCard from "./defaultApps/DefaultAppsCard";
 import DataContext from "../../../DataContext";
 import { NavLink } from "react-router";
 
@@ -25,7 +25,7 @@ function Home() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-10 gap-5  pb-10">
           {defaultApps.map((app) => (
             <Suspense fallback={<div>Loading...</div>}>
-              <DefaultApps key={app.id} app={app}></DefaultApps>
+              <DefaultAppsCard key={app.id} app={app}></DefaultAppsCard>
             </Suspense>
           ))}
         </div>

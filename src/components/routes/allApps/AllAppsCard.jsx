@@ -3,9 +3,9 @@ import { FiDownload } from "react-icons/fi";
 import { FaRegStarHalfStroke } from "react-icons/fa6";
 import { NavLink } from "react-router";
 
-function DefaultApps({ app }) {
+function AllAppsCard({ app }) {
   return (
-    <NavLink to={`appdetails/${app.id}`}>
+    <NavLink to={`/appdetails/${app.id}`}>
       <div className="p-4 rounded-md bg-white flex flex-col gap-3">
         <div className="">
           <img src={app.image} alt="app logo" />
@@ -31,4 +31,4 @@ function DefaultApps({ app }) {
   );
 }
 
-export default DefaultApps;
+export default AllAppsCard;

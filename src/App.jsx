@@ -10,8 +10,8 @@ function App() {
   useEffect(() => {
     fetch("/apps.json")
       .then((res) => res.json())
-      .then((data) => setApps(data))
-      .catch(console.log("invalid url"));
+      .then((data) => setApps(data));
+    // .catch(console.log("invalid url"));
   }, []);
   // console.log(apps);
 

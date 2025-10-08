@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import DataContext from "../../../DataContext";
-import DefaultApps from "../home/defaultApps/DefaultApps";
+import AllAppsCard from "./AllAppsCard";
 
 function AllApps() {
   const allApps = useContext(DataContext);
@@ -26,7 +26,7 @@ function AllApps() {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-10 gap-5  pb-10">
           {allApps.map((app) => (
-            <DefaultApps app={app} key={app.id}></DefaultApps>
+            <AllAppsCard app={app} key={app.id}></AllAppsCard>
           ))}
         </div>
       </div>
