@@ -8,7 +8,7 @@ function App() {
   const [apps, setApps] = useState([]);
 
   useEffect(() => {
-    fetch("apps.json")
+    fetch("/apps.json")
       .then((res) => res.json())
       .then((data) => setApps(data))
       .catch(console.log("invalid url"));
@@ -18,11 +18,11 @@ function App() {
   return (
     <>
       <Header></Header>
-      <DataContext value={apps}>
+      <DataContext.Provider value={apps}>
         <Suspense fallback={<div> Loading...</div>}>
           <Outlet></Outlet>
         </Suspense>
-      </DataContext>
+      </DataContext.Provider>
 
       <Footer></Footer>
     </>

@@ -25,8 +25,8 @@ function AllApps() {
           />
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-10 gap-5  pb-10">
-          {allApps.map((app, i) => (
-            <DefaultApps app={app} key={i}></DefaultApps>
+          {allApps.map((app) => (
+            <DefaultApps app={app} key={app.id}></DefaultApps>
           ))}
         </div>
       </div>

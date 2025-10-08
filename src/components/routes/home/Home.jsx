@@ -22,15 +22,14 @@ function Home() {
           Explore All Trending Apps on the Market developed by us
         </p>
 
-        <NavLink to="/appdetails">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-10 gap-5  pb-10">
-            {defaultApps.map((app, i) => (
-              <Suspense fallback={<div>Loading...</div>}>
-                <DefaultApps key={i} app={app}></DefaultApps>
-              </Suspense>
-            ))}
-          </div>
-        </NavLink>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-10 gap-5  pb-10">
+          {defaultApps.map((app) => (
+            <Suspense fallback={<div>Loading...</div>}>
+              <DefaultApps key={app.id} app={app}></DefaultApps>
+            </Suspense>
+          ))}
+        </div>
+
         <NavLink className="mx-auto " to="/allapps">
           <button className="py-2 px-5 bg-gradient-to-r from-purple-700 to-purple-500 font-bold text-white rounded-sm flex items-center gap-3 mx-auto ">
             All Apps
