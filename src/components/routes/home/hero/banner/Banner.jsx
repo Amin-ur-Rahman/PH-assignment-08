@@ -14,29 +14,33 @@ function Banner() {
         turn your ideas into digital experiences that truly make an impact.
       </p>
       <div className="flex justify-center gap-3 items-center py-6">
-        <button
-          type="button "
-          className="py-2 px-4 border-2 rounded-sm font-bold text-gray-600 text-lg border-gray-200 flex items-center justify-between gap-2"
-        >
-          {" "}
-          <img
-            src={playstore}
-            alt="playstore logo"
-            className="w-8 h-8 object-cover"
-          />
-          Google Play
-        </button>
-        <button
-          type="button"
-          className="py-2 px-4 border-2 rounded-sm font-bold text-gray-600 text-lg border-gray-200 flex items-center justify-between gap-2"
-        >
-          <img
-            src={appstore}
-            alt="app store logo"
-            className="w-8 h-8 object-cover"
-          />
-          App Store
-        </button>
+        <a href="https://play.google.com" target="_blank">
+          <button
+            type="button "
+            className="py-2 px-4 border-2 rounded-sm font-bold text-gray-600 text-lg border-gray-200 flex items-center justify-between gap-2 hover:cursor-pointer hover:translate-y-[-2px] duration-200 bg-white"
+          >
+            {" "}
+            <img
+              src={playstore}
+              alt="playstore logo"
+              className="w-8 h-8 object-cover"
+            />
+            Google Play
+          </button>
+        </a>
+        <a href="https://www.apple.com/app-store/" target="_blank">
+          <button
+            type="button"
+            className="py-2 px-4 border-2 rounded-sm font-bold text-gray-600 text-lg border-gray-200 flex items-center justify-between gap-2 hover:cursor-pointer hover:translate-y-[-2px] duration-200 bg-white"
+          >
+            <img
+              src={appstore}
+              alt="app store logo"
+              className="w-8 h-8 object-cover"
+            />
+            App Store
+          </button>
+        </a>
       </div>
     </div>
   );

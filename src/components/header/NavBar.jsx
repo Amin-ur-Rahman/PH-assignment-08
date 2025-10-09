@@ -14,7 +14,7 @@ const NavBar = () => {
       "
     >
       <div className="flex items-center gap-5 ">
-        <button className="btn btn-square btn-ghost md:hidden">
+        <button className=" md:hidden">
           {toggle ? (
             <X size={36} onClick={() => setToggle(!toggle)}></X>
           ) : (
@@ -23,8 +23,8 @@ const NavBar = () => {
         </button>
         <ul
           className={`bg-white  border-b-[.25px] shadow-sm shadow-gray-500 text-black font-semibold px-5 rounded-md py-4  absolute top-[8%]  ${
-            toggle ? "left-0" : "-left-[100%]"
-          } duration-300 flex flex-col gap-4 font-semibold`}
+            toggle ? "left-2" : "-left-[100%]"
+          } duration-300 flex flex-col gap-2 font-semibold`}
         >
           <X
             size={20}
@@ -38,10 +38,12 @@ const NavBar = () => {
         <div>
           <div className="flex gap-3 items-center" to="/">
             <img src={logo} alt="logo" className="w-10 h-10 object-cover" />
-            <h2 className="text-[clamp(1.5rem,2dvw,2.5rem)] font-bold hover:cursor-pointer  duration-200 ">
-              <span className="text-[#4b99e7]">SU.</span>
-              <span className="text-indigo-500">apk</span>
-            </h2>
+            <a href="/">
+              <h2 className="text-[clamp(1.5rem,2dvw,2.5rem)] font-bold hover:cursor-pointer  duration-200 ">
+                <span className="text-[#4b99e7]">SU.</span>
+                <span className="text-indigo-500">apk</span>
+              </h2>
+            </a>
           </div>
         </div>
       </div>

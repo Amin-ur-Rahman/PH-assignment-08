@@ -2,13 +2,16 @@ import React from "react";
 import { FiDownload } from "react-icons/fi";
 import { FaRegStarHalfStroke } from "react-icons/fa6";
 import { NavLink } from "react-router";
+import Error404 from "../../header/Error404";
 
 function AllAppsCard({ app }) {
+  const id = Number(app.id);
+
   return (
-    <NavLink to={`/appdetails/${app.id}`}>
-      <div className="p-4 rounded-md bg-white flex flex-col gap-3 hover:cursor-pointer hover:translate-y-[-2px] duration-200 hover:shadow-md">
-        <div className="">
-          <img src={app.image} alt="app logo" />
+    <NavLink to={`/appdetails/${id}`}>
+      <div className="p-4 rounded-md bg-white flex flex-col gap-3 hover:cursor-pointer hover:translate-y-[-2px] duration-200 hover:shadow-md h-[435px]">
+        <div className="flex">
+          <img src={app.image} className="flex-grow" alt="app logo" />
         </div>
         <h2 className="font-semibold">
           {app.title}{" "}
