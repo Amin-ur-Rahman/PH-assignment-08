@@ -5,8 +5,8 @@ import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import Home from "./components/routes/home/Home.jsx";
 import AllApps from "./components/routes/allApps/AllApps.jsx";
-import Installation from "./components/routes/installation/installation.jsx";
-import ErrorMessage from "./ErrorMessage.jsx";
+import Installation from "./components/routes/installation/Installation.jsx";
+// import ErrorMessage from "./ErrorMessage.jsx";
 import AppDetails from "./components/routes/appDetails/AppDetails.jsx";
 import Error404 from "./components/header/Error404.jsx";
 
