@@ -8,6 +8,7 @@ import AllApps from "./components/routes/allApps/AllApps.jsx";
 import Installation from "./components/routes/installation/installation.jsx";
 import ErrorMessage from "./ErrorMessage.jsx";
 import AppDetails from "./components/routes/appDetails/AppDetails.jsx";
+import Error404 from "./components/header/Error404.jsx";
 
 const router = createBrowserRouter([
   {
@@ -19,21 +20,22 @@ const router = createBrowserRouter([
         index: true,
         path: "/",
         element: <Home></Home>,
-        errorElement: <ErrorMessage></ErrorMessage>,
+        errorElement: <Error404></Error404>,
       },
       {
         path: "allapps",
         element: <AllApps></AllApps>,
-        errorElement: <ErrorMessage></ErrorMessage>,
+        errorElement: <Error404></Error404>,
       },
       {
         path: "installation",
         element: <Installation></Installation>,
-        errorElement: <ErrorMessage></ErrorMessage>,
+        errorElement: <Error404></Error404>,
       },
       {
         path: "appdetails/:appId",
         element: <AppDetails></AppDetails>,
+        errorElement: <Error404></Error404>,
       },
     ],
   },

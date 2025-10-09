@@ -6,7 +6,7 @@ import { NavLink } from "react-router";
 function AllAppsCard({ app }) {
   return (
     <NavLink to={`/appdetails/${app.id}`}>
-      <div className="p-4 rounded-md bg-white flex flex-col gap-3">
+      <div className="p-4 rounded-md bg-white flex flex-col gap-3 hover:cursor-pointer hover:translate-y-[-2px] duration-200 hover:shadow-md">
         <div className="">
           <img src={app.image} alt="app logo" />
         </div>

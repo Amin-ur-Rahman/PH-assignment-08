@@ -3,6 +3,7 @@ import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import { Suspense, useEffect, useState } from "react";
 import DataContext from "./DataContext";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const [apps, setApps] = useState([]);
@@ -25,6 +26,7 @@ function App() {
       </DataContext.Provider>
 
       <Footer></Footer>
+      <ToastContainer></ToastContainer>
     </>
   );
 }

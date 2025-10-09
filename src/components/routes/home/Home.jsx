@@ -23,15 +23,15 @@ function Home() {
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-10 gap-5  pb-10">
-          {defaultApps.map((app) => (
-            <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div>Loading...</div>}>
+            {defaultApps.map((app) => (
               <DefaultAppsCard key={app.id} app={app}></DefaultAppsCard>
-            </Suspense>
-          ))}
+            ))}
+          </Suspense>
         </div>
 
         <NavLink className="mx-auto " to="/allapps">
-          <button className="py-2 px-5 bg-gradient-to-r from-purple-700 to-purple-500 font-bold text-white rounded-sm flex items-center gap-3 mx-auto ">
+          <button className="py-2 px-5 bg-gradient-to-r from-purple-700 to-purple-500 font-bold text-white rounded-sm flex items-center gap-3 mx-auto hover:cursor-pointer hover:translate-y-[-2px] duration-200">
             All Apps
           </button>
         </NavLink>
