@@ -22,10 +22,15 @@ const NavBar = () => {
           )}
         </button>
         <ul
-          className={`bg-white  border-b-[.25px] shadow-sm shadow-gray-500 text-black font-semibold px-10 rounded-md py-4  absolute top-[10%]  ${
+          className={`bg-white  border-b-[.25px] shadow-sm shadow-gray-500 text-black font-semibold px-5 rounded-md py-4  absolute top-[8%]  ${
             toggle ? "left-0" : "-left-[100%]"
           } duration-300 flex flex-col gap-4 font-semibold`}
         >
+          <X
+            size={20}
+            onClick={() => setToggle(!toggle)}
+            className=" hover:bg-gray-300 self-end"
+          ></X>
           <NavLink to="/">Home</NavLink>
           <NavLink to="allapps">Apps</NavLink>
           <NavLink to="/installation">Installation</NavLink>

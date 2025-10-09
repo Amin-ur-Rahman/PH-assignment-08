@@ -1,4 +1,4 @@
-import { StrictMode } from "react";
+import { StrictMode, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
@@ -13,7 +13,11 @@ import Error404 from "./components/header/Error404.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App></App>,
+    element: (
+      <Suspense fallback={<div>Loading...</div>}>
+        <App></App>
+      </Suspense>
+    ),
 
     children: [
       {

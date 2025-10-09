@@ -16,7 +16,10 @@ function Installed({ app, onUninstall }) {
       <div className="flex justify-between w-full">
         <div>
           <h2>
-            {app.title} - {app.description}
+            <span className="text-xl font-semibold text-gray-500">
+              {app.title}
+            </span>{" "}
+            - {app.description}
           </h2>
           <div className="flex gap-5">
             <span className="flex items-center gap-1 text-green-500 font-semibold">
@@ -30,7 +33,7 @@ function Installed({ app, onUninstall }) {
           </div>
         </div>
         <button
-          className="px-4 py-2 text-white bg-[#d30000] rounded-md font-semibold hover:cursor-pointer hover:translate-y-[-2px] duration-200"
+          className="px-4 py-2 h-max self-center md:py-3 text-white bg-[#d30000] rounded-md font-semibold hover:cursor-pointer hover:translate-y-[-2px] duration-200"
           onClick={() => {
             handleClick();
             toast(`${app.title} has uninstalled from device`);
