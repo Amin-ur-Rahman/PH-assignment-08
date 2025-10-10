@@ -10,9 +10,8 @@ function Installed({ app, onUninstall }) {
 
   return (
     <div className="bg-white shadow-sm p-3 my-3 rounded-md flex items-center gap-5">
-      <div>
-        <img src={app.image} alt="app logo" className="w-12 h-12" />
-      </div>
+      <img src={app.image} alt="app logo" className="w-12 h-12 rounded-lg" />
+
       <div className="flex justify-between w-full">
         <div>
           <h2>

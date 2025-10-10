@@ -9,10 +9,14 @@ function AllAppsCard({ app }) {
 
   return (
     <NavLink to={`/appdetails/${id}`}>
-      <div className="p-4 rounded-md bg-white flex flex-col gap-3 hover:cursor-pointer hover:translate-y-[-2px] duration-200 hover:shadow-md h-[435px]">
-        <div className="flex">
-          <img src={app.image} className="flex-grow" alt="app logo" />
-        </div>
+      <div className="p-4 rounded-2xl bg-white flex flex-col gap-3 hover:cursor-pointer hover:translate-y-[-2px] duration-200 hover:shadow-md ">
+        {/* <div className="flex"> */}
+        <img
+          src={app.image}
+          className="w-[300px] h-[300px] object-cover rounded-2xl"
+          alt="app logo"
+        />
+        {/* </div> */}
         <h2 className="font-semibold">
           {app.title}{" "}
           <small className="line-clamp-1 text-gray-600">
