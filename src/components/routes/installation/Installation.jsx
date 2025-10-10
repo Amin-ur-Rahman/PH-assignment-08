@@ -31,11 +31,11 @@ function Installation() {
 
   return (
     <div className="py-10 bg-[#f5f5f5] px-[5dvw] w-full mx-auto">
-      <div>
+      <div className="pb-10 ">
         <h1 className="text-4xl text-center my-3 font-bold">
           Your Installed Apps
         </h1>
-        <p className="text-gray-500 text-center">
+        <p className="text-gray-500 text-center line-clamp-1 text-sm md:text-[1rem]">
           Explore All Trending Apps on the Market developed by us
         </p>
       </div>

@@ -15,12 +15,10 @@ function Installed({ app, onUninstall }) {
 
       <div className="flex justify-between w-full">
         <div>
-          <h2>
-            <span className="text-xl font-semibold text-gray-500">
-              {app.title}
-            </span>{" "}
-            - {app.description}
-          </h2>
+          <div className="md:flex items-center justify-center gap-2">
+            <p className="text-xl font-semibold text-gray-500 ">{app.title}</p>{" "}
+            <p className="hidden md:block">- {app.description}</p>
+          </div>
           <div className="flex gap-5">
             <span className="flex items-center gap-1 text-green-500 font-semibold">
               <FiDownload />

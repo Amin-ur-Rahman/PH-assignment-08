@@ -31,11 +31,11 @@ function AllApps() {
         <h2 className="text-[#001931] text-[clamp(1.5rem,3dvw,3rem)] font-bold text-center">
           All Our Applications
         </h2>
-        <p className="text-center">
+        <p className="text-center mb-10">
           Explore All Apps on the Market developed by us. We code for Millions
         </p>
         <div className="flex justify-between items-center  w-full">
-          <h2 className="text-xl font-semibold">
+          <h2 className="text-[clamp(1rem,2dvw,2.2rem)] font-semibold">
             ({allApps.length}) apps found
           </h2>
           <input
@@ -43,7 +43,7 @@ function AllApps() {
             type="text"
             name="text"
             placeholder="search apps"
-            className="border border-gray-400 rounded-sm px-2 py-1"
+            className="border border-gray-400 rounded-sm px-2 py-1 w-[150px] md:w-auto"
           />
         </div>
         {loading && (
