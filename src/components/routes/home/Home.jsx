@@ -22,7 +22,7 @@ function Home() {
           Explore All Trending Apps on the Market developed by us
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-10 gap-5  pb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-10 gap-5  pb-10">
           <Suspense fallback={<div>Loading...</div>}>
             {defaultApps.map((app) => (
               <DefaultAppsCard key={app.id} app={app}></DefaultAppsCard>

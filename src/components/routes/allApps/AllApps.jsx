@@ -2,15 +2,25 @@ import React, { useContext, useState } from "react";
 import DataContext from "../../../DataContext";
 import AllAppsCard from "./AllAppsCard";
 import ErrorMessage from "../../../ErrorMessage";
+import logo from "../../../assets/logo.png";
 
 function AllApps() {
   const [searchValue, setSearchValue] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const hadnleSearch = (e) => {
+    setSearchValue(e.target.value);
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 150);
+  };
   console.log(searchValue);
 
   const allApps = useContext(DataContext);
 
   const filterApps = allApps.filter((app) => {
-    return app.title.toLowerCase() === ""
+    return searchValue === ""
       ? true
       : app.title.toLowerCase().includes(searchValue.toLowerCase());
   });
@@ -29,15 +39,24 @@ function AllApps() {
             ({allApps.length}) apps found
           </h2>
           <input
-            onChange={(e) => setSearchValue(e.target.value)}
+            onChange={hadnleSearch}
             type="text"
             name="text"
             placeholder="search apps"
             className="border border-gray-400 rounded-sm px-2 py-1"
           />
         </div>
+        {loading && (
+          <div className="loading-overlay">
+            <div className="loading-content">
+              <img src={logo} alt="Loading" className="rotating-img" />
+              <span className="loading-text">LOADING</span>
+              <img src={logo} alt="Loading" className="rotating-img" />
+            </div>
+          </div>
+        )}
         {filterApps.length > 0 ? (
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-10 gap-5  pb-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-10 gap-5  pb-10">
             {filterApps.map((app) => (
               <AllAppsCard app={app} key={app.id}></AllAppsCard>
             ))}

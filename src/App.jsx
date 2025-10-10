@@ -30,7 +30,7 @@ function App() {
       </DataContext.Provider>
 
       <Footer></Footer>
-      <ToastContainer position="top-center"></ToastContainer>
+      <ToastContainer position="bottom-right"></ToastContainer>
     </>
   );
 }

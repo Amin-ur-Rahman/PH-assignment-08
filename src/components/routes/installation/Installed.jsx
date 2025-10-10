@@ -2,6 +2,7 @@ import React from "react";
 import { FiDownload } from "react-icons/fi";
 import { FaRegStarHalfStroke } from "react-icons/fa6";
 import { toast } from "react-toastify";
+import { number } from "../../../NumberFunction";
 
 function Installed({ app, onUninstall }) {
   const handleClick = () => {
@@ -23,7 +24,7 @@ function Installed({ app, onUninstall }) {
           <div className="flex gap-5">
             <span className="flex items-center gap-1 text-green-500 font-semibold">
               <FiDownload />
-              {app.downloads}
+              {number(app.downloads)}
             </span>
             <span className="flex items-center gap-1 text-orange-500 font-semibold">
               <FaRegStarHalfStroke />

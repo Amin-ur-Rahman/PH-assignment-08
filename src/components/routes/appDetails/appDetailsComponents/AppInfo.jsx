@@ -74,7 +74,7 @@ function AppInfo() {
             <div className="pt-6 flex justify-center md:justify-between mx-auto md:mx-0 w-max gap-10 md:gap-20">
               <div className="flex flex-col gap-1 justify-center items-center">
                 <img src={downloadLogo} alt="downloadLogo" /> <p>downloads</p>{" "}
-                <p className="font-bold text-2xl">{downloads}</p>
+                <p className="font-bold text-2xl">{number(downloads)}</p>
               </div>
               <div className="flex flex-col gap-1 justify-center items-center">
                 <img src={ratingLogo} alt="ratingLogo" /> <p>ratings</p>{" "}
@@ -116,5 +116,6 @@ import {
   setAppData,
 } from "../../installation/installationFunction";
 import ErrorMessage from "../../../../ErrorMessage";
+import { number } from "../../../../NumberFunction";
 
 export default AppInfo;
