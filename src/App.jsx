@@ -4,6 +4,8 @@ import Footer from "./components/footer/Footer";
 import { Suspense, useEffect, useState } from "react";
 import DataContext from "./DataContext";
 import { ToastContainer } from "react-toastify";
+import Layout from "./Layout";
+import "./index.css";
 
 function App() {
   const [apps, setApps] = useState([]);
@@ -21,12 +23,14 @@ function App() {
       <Header></Header>
       <DataContext.Provider value={apps}>
         <Suspense fallback={<div> Loading...</div>}>
-          <Outlet></Outlet>
+          <Layout>
+            <Outlet></Outlet>
+          </Layout>
         </Suspense>
       </DataContext.Provider>
 
       <Footer></Footer>
-      <ToastContainer></ToastContainer>
+      <ToastContainer position="top-center"></ToastContainer>
     </>
   );
 }
