@@ -1,16 +1,47 @@
-# React + Vite
+# SU.apk — Super User Android App Hub 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**SU.apk** (Super User APK) is a sleek, React-powered web application that showcases and distributes Android APK files. Built with Tailwind CSS for rapid styling and responsive design, SU.apk offers users a fast, effcient way to explore and install Android apps directly from the browser.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧩 Features
 
-## React Compiler
+- 🔍 **Live Search** — Instantly filter apps with a responsive search bar
+- 📦 **APK Listings** — Browse a curated collection of Android apps
+- 📥 **Download Tracker** — See real-time download counts and ratings
+- 🌐 **Responsive UI** — Optimized for mobile and desktop devices
+- ⚡ **Built with React + Tailwind** — Fast, maintainable, and modern
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Technology   | Purpose                       |
+| ------------ | ----------------------------- |
+| React        | UI and component architecture |
+| Tailwind CSS | Utility-first styling         |
+| Vite         | Fast dev server and bundling  |
+| React Router | Client-side routing           |
+
+---
+
+## 📸 Screenshots
+
+![HomePage](./src/assets/webAppScreenshots/home.png);
+
+![AllAppsPage](./src/assets/webAppScreenshots/fullpage.png);
+
+![LiveSearch](./src/assets/webAppScreenshots/search.png);
+
+![AppDetails](./src/assets/webAppScreenshots/appdetails.png);
+
+![AppTracker](./src/assets/webAppScreenshots/installedapptracker.png)
+
+---
+
+# Credits
+
+Built with patience and thoughts by **AminurRahman** using React, Tailwind, and a passion for clean UI.
+
+---
+
