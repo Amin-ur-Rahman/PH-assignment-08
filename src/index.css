@@ -23,7 +23,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: clamp(20px, 3dvw, 3rem);
 }
 
 .rotating-img {
@@ -32,7 +32,7 @@
   animation: spin 1s linear infinite;
 }
 .loading-text {
-  font-size: 3rem;
+  font-size: clamp(1.8rem, 2.5dvw, 3rem);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 600;
   color: #333;
